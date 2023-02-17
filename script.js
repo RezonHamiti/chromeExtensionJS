@@ -1,10 +1,18 @@
 const inputBtn = document.querySelector("#input-btn");
 const inputElement = document.querySelector("#input-element");
 const ulElement = document.querySelector("#ul-element");
+const deleteBtn = document.querySelector("#input-delete");
 let myLeads = [];
 
 
 inputBtn.addEventListener("click", saveInput);
+deleteBtn.addEventListener("click", deleteInput);
+
+function deleteInput() {
+  localStorage.clear();
+  location.reload();
+}
+
 
 
 // get leads from the localStorage
