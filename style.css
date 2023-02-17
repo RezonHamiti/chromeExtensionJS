@@ -37,4 +37,19 @@ a {
     border-radius: 2px;
 }
 
+#input-delete {
+  background-color: #ffffff; 
+  border: 0.5px solid #4CAF50;
+  color: #4CAF50;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  border-radius: 2px;
+  border-color: #4caf50;
+  box-sizing: border-box;
+}
+
 
