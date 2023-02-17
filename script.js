@@ -1,18 +1,33 @@
 const inputBtn = document.querySelector("#input-btn");
 const inputElement = document.querySelector("#input-element");
 const ulElement = document.querySelector("#ul-element");
-
 let myLeads = [];
+
 
 inputBtn.addEventListener("click", saveInput);
 
+
+// get leads from the localStorage
+let leadsFromLocal = JSON.parse( localStorage.getItem("myLeads"));
+if(leadsFromLocal) {
+  myLeads = leadsFromLocal;
+  renderLeads();
+}
+
+
+
+
+
+
+
 function saveInput() {
   myLeads.push(inputElement.value);
-  renderLeads();
   // clear the input field onclick
-  if (inputElement.value != "") {
-    inputElement.value = "";
-  }
+  inputElement.value = "";
+  localStorage.setItem("myLeads", JSON.stringify(myLeads));
+  renderLeads();
+  // log the local storage
+  console.log(localStorage.getItem("myLeads"));
 }
 
 function renderLeads() {
