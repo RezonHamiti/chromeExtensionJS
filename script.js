@@ -10,7 +10,7 @@ function saveInput() {
   myLeads.push(inputElement.value);
   renderLeads();
   // clear the input field onclick
-  if(inputElement.value != "") {
+  if (inputElement.value != "") {
     inputElement.value = "";
   }
 }
@@ -21,13 +21,12 @@ function renderLeads() {
     // place input in a tag so it can be clicked, open new browser with target='_blank'
     listItems += `
         <li> 
-        <a target='_blank' href= '${myLeads[i]}'>
-          ${myLeads[i]}
-        </a>
+          <a target='_blank' href= '${myLeads[i]}'>
+            ${myLeads[i]}
+          </a>
         </li>
-    `
+    `;
   }
-  // render the myLeads items inside the ul 
+  // render the myLeads items inside the ul
   ulElement.innerHTML = listItems;
 }
-
