@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 10px;
   font-family: Arial, Helvetica, sans-serif;
+  min-width: 400px;
 }
 
 input {
@@ -17,6 +18,7 @@ input {
 li {
   list-style-type: none;
 }
+
 a {
   color:#4CAF50;
   font-size: 1.5rem;
