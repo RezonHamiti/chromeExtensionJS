@@ -17,6 +17,7 @@ input {
 
 li {
   list-style-type: none;
+  margin-bottom: 15px;
 }
 
 a {
@@ -41,6 +42,21 @@ a {
   background-color: #ffffff; 
   border: 0.5px solid #4CAF50;
   color: #4CAF50;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  border-radius: 2px;
+  border-color: #4caf50;
+  box-sizing: border-box;
+}
+
+#save-tab-btn {
+  background-color: #4CAF50; 
+  border: none;
+  color: #fbfffb;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
