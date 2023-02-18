@@ -2,12 +2,22 @@ const inputBtn = document.querySelector("#input-btn");
 const inputElement = document.querySelector("#input-element");
 const ulElement = document.querySelector("#ul-element");
 const deleteBtn = document.querySelector("#input-delete");
+const saveTabBtn = document.querySelector("#save-tab-btn");
 let myLeads = [];
 
 const leadsFromLocal = JSON.parse(localStorage.getItem("myLeads"));
 
 inputBtn.addEventListener("click", saveInput);
 deleteBtn.addEventListener("dblclick", deleteInput);
+
+saveTabBtn.addEventListener("click", function () {
+  // target chrome active window tab and push it to array 
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    myLeads.push(tabs[0].url);
+    localStorage.setItem("myLeads", JSON.stringify(myLeads));
+    render(myLeads);
+  });
+});
 
 function deleteInput() {
   localStorage.clear();
